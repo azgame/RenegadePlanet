@@ -1,0 +1,59 @@
+
+
+Use Cases
+
+Earth
+
+- Navigate
+	- Basic 2d movement
+	- camera smart-locked on player
+
+- Interact
+	- Doors
+		- Travel from space to space
+	- Objects
+		- Enter interact screen with object, perform contextual actions
+		- eg. computers, pay terminals, cash registers, etc.
+	- People
+		- engage Dialogue if talkable NPC
+	- Activity stations
+		- Stations specific to activity choices, begins activity
+	
+- Dialogue
+	- Choose dialogue option
+	- Get dialogue response
+	- Receive quest if available
+	- Complete quest if conditions met
+	
+Rodenberry
+
+- Navigate 
+	- 3D movement
+	- Jump
+	- Dash/Dodge
+
+- Combat (Rob)
+	- Melee
+	- Abilities
+
+- Interact
+	- Doors
+	- Machines
+	- Other droids(?)
+	- Q Comms
+
+- Gather (same button as pick up)
+	- 
+
+- Pick up (same button as gather)
+	- 
+
+- Place objects
+	- Choose item from inventory
+	- Drop/place item into environment
+	- Place item into machinery
+
+///////////////// Extra
+- Photograph
+
+- Tag
