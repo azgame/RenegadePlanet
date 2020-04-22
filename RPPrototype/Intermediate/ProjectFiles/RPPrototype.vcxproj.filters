@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\RPPrototype.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{9425D522-B90D-4F05-9BD0-7DD5DD5105F8}</UniqueIdentifier>
+      <UniqueIdentifier>{8D9863BA-F2D2-46FF-821B-403930EAC5F5}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\RPPrototype.Target.cs">
       <Filter>Source</Filter>
@@ -11,8 +11,9 @@
     <None Include="..\..\Source\RPPrototypeEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.gitignore" />
     <Filter Include="Config">
-      <UniqueIdentifier>{30C098C7-8A76-41D7-B0FA-A104361C6B11}</UniqueIdentifier>
+      <UniqueIdentifier>{1854AC3D-3585-41E6-87D9-8C4B51533162}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -30,7 +31,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\RPPrototype">
-      <UniqueIdentifier>{6AC8436F-67FC-4210-B547-B55A97F2CCE5}</UniqueIdentifier>
+      <UniqueIdentifier>{C921BB9C-6D4E-4CF7-83BF-1E5F883AF9FB}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\RPPrototype\RPPrototype.Build.cs">
       <Filter>Source\RPPrototype</Filter>
@@ -52,6 +53,33 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\RPPrototype\RPPrototypeGameMode.h">
       <Filter>Source\RPPrototype</Filter>
+    </ClInclude>
+    <Filter Include="Source\RPPrototype\Characters">
+      <UniqueIdentifier>{22C95344-00C6-4741-8A41-429A8148F2DA}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\RPPrototype\Characters\RPSideCharacter.cpp">
+      <Filter>Source\RPPrototype\Characters</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\RPPrototype\Characters\RPSideCharacter.h">
+      <Filter>Source\RPPrototype\Characters</Filter>
+    </ClInclude>
+    <Filter Include="Source\RPPrototype\Interfaces">
+      <UniqueIdentifier>{A399C3EB-B51B-486C-B3DC-BE703535B30E}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\RPPrototype\Interfaces\Interactable.cpp">
+      <Filter>Source\RPPrototype\Interfaces</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\RPPrototype\Interfaces\Interactable.h">
+      <Filter>Source\RPPrototype\Interfaces</Filter>
+    </ClInclude>
+    <Filter Include="Source\RPPrototype\Testing">
+      <UniqueIdentifier>{EAB046CA-D5B3-451D-9CE8-CF7613AEF423}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\RPPrototype\Testing\InteractTest.cpp">
+      <Filter>Source\RPPrototype\Testing</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\RPPrototype\Testing\InteractTest.h">
+      <Filter>Source\RPPrototype\Testing</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
