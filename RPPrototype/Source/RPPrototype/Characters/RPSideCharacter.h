@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "CollisionComponent.h"
 #include "RPSideCharacter.generated.h"
 
 UCLASS(config = Game)
@@ -23,6 +24,9 @@ public:
 	// Sets default values for this character's properties
 	ARPSideCharacter();
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = CollisionComponent)
+		UCollisionComponent* collisionComponent;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -41,5 +45,4 @@ public:
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
 	/** Returns FollowCamera subobject **/
 	FORCEINLINE class UCameraComponent* GetFollowCamera() const { return SideViewCameraComponent; }
-
 };

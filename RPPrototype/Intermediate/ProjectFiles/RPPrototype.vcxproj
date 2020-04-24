@@ -281,6 +281,8 @@
     <ClInclude Include="..\..\Source\RPPrototype\RPPrototypeCharacter.h"/>
     <ClCompile Include="..\..\Source\RPPrototype\RPPrototypeGameMode.cpp"/>
     <ClInclude Include="..\..\Source\RPPrototype\RPPrototypeGameMode.h"/>
+    <ClCompile Include="..\..\Source\RPPrototype\Characters\CollisionComponent.cpp"/>
+    <ClInclude Include="..\..\Source\RPPrototype\Characters\CollisionComponent.h"/>
     <ClCompile Include="..\..\Source\RPPrototype\Characters\RPSideCharacter.cpp"/>
     <ClInclude Include="..\..\Source\RPPrototype\Characters\RPSideCharacter.h"/>
     <ClCompile Include="..\..\Source\RPPrototype\Interfaces\Interactable.cpp"/>
