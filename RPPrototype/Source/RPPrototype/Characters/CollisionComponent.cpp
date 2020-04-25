@@ -57,18 +57,20 @@ void UCollisionComponent::onInteract()
 	{
 		if (actor != owner)
 		{
-			GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, FString::Printf(TEXT("actor: %s"), *actor->GetName()));
 			IInteractable* it = Cast<IInteractable>(actor);
 			if (it)
 			{
-				float distance = owner->GetDistanceTo(actor);
-				if (distance < shortestDistance)
+				if (0 <= owner->GetActorForwardVector().DotProduct(owner->GetActorForwardVector(), actor->GetActorLocation() - owner->GetActorLocation()))
 				{
-					shortestDistance = distance;
-					closestInteract = it;
+					float distance = owner->GetDistanceTo(actor);
+						if (distance < shortestDistance)
+						{
+							shortestDistance = distance;
+								closestInteract = it;
+						}
 				}
+				it = nullptr;
 			}
-			it = nullptr;
 		}
 	}
 
