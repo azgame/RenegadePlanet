@@ -2,12 +2,12 @@
 	"Targets": [
 		{
 			"Name": "RPPrototype",
-			"Path": "C:\\Users\\aidan\\Documents\\RenegadePlanet\\RPPrototype\\Source\\RPPrototype.Target.cs",
+			"Path": "C:\\Users\\rober\\Desktop\\College\\GameJam2019\\RenegadePlanet\\RPPrototype\\Source\\RPPrototype.Target.cs",
 			"Type": "Game"
 		},
 		{
 			"Name": "RPPrototypeEditor",
-			"Path": "C:\\Users\\aidan\\Documents\\RenegadePlanet\\RPPrototype\\Source\\RPPrototypeEditor.Target.cs",
+			"Path": "C:\\Users\\rober\\Desktop\\College\\GameJam2019\\RenegadePlanet\\RPPrototype\\Source\\RPPrototypeEditor.Target.cs",
 			"Type": "Editor"
 		}
 	]

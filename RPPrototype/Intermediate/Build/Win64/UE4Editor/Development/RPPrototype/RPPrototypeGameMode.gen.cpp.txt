@@ -1,9 +1,9 @@
-C:\Users\aidan\Documents\RenegadePlanet\RPPrototype\Intermediate\Build\Win64\UE4Editor\Development\RPPrototype\Definitions.RPPrototype.h
+C:\Users\rober\Desktop\College\GameJam2019\RenegadePlanet\RPPrototype\Intermediate\Build\Win64\UE4Editor\Development\RPPrototype\Definitions.RPPrototype.h
 C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
 C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
-C:\Users\aidan\Documents\RenegadePlanet\RPPrototype\Source\RPPrototype/RPPrototypeGameMode.h
+C:\Users\rober\Desktop\College\GameJam2019\RenegadePlanet\RPPrototype\Source\RPPrototype/RPPrototypeGameMode.h
 C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h
 C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator.h
 C:\Program Files\Epic Games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplicator.generated.h
 C:\Program Files\Epic Games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
-C:\Users\aidan\Documents\RenegadePlanet\RPPrototype\Intermediate\Build\Win64\UE4Editor\Inc\RPPrototype\RPPrototypeGameMode.generated.h
+c:\users\rober\desktop\college\gamejam2019\renegadeplanet\rpprototype\intermediate\build\win64\ue4editor\inc\rpprototype\RPPrototypeGameMode.generated.h

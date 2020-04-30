@@ -228,8 +228,8 @@
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\ClothingSystemRuntimeInterface
 /I Runtime\ClothingSystemRuntimeInterface\Public
 /I Runtime\AudioMixerCore\Public
-/I C:\Users\aidan\Documents\RenegadePlanet\RPPrototype\Intermediate\Build\Win64\UE4Editor\Inc\RPPrototype
-/I C:\Users\aidan\Documents\RenegadePlanet\RPPrototype\Source
+/I C:\Users\rober\Desktop\College\GameJam2019\RenegadePlanet\RPPrototype\Intermediate\Build\Win64\UE4Editor\Inc\RPPrototype
+/I C:\Users\rober\Desktop\College\GameJam2019\RenegadePlanet\RPPrototype\Source
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\AugmentedReality
 /I Runtime\AugmentedReality\Public
 /I ThirdParty\PhysX3\PxShared\include
@@ -255,18 +255,18 @@
 /I ThirdParty\PhysX3\APEX_1.4\shared\general\RenderDebug\public
 /I ThirdParty\PhysX3\APEX_1.4\shared\general\PairFilter\include
 /I ThirdParty\PhysX3\APEX_1.4\shared\internal\include
-/I "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\INCLUDE"
-/I "C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"
-/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt"
-/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared"
-/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um"
-/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt"
-/FI"C:\Users\aidan\Documents\RenegadePlanet\RPPrototype\Intermediate\Build\Win64\RPPrototypeEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
-/Yu"C:\Users\aidan\Documents\RenegadePlanet\RPPrototype\Intermediate\Build\Win64\RPPrototypeEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
-/Fp"C:\Users\aidan\Documents\RenegadePlanet\RPPrototype\Intermediate\Build\Win64\RPPrototypeEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
-"C:\Users\aidan\Documents\RenegadePlanet\RPPrototype\Intermediate\Build\Win64\UE4Editor\Inc\RPPrototype\RPPrototypeGameMode.gen.cpp"
-/FI"C:\Users\aidan\Documents\RenegadePlanet\RPPrototype\Intermediate\Build\Win64\UE4Editor\Development\RPPrototype\Definitions.RPPrototype.h"
-/Fo"C:\Users\aidan\Documents\RenegadePlanet\RPPrototype\Intermediate\Build\Win64\UE4Editor\Development\RPPrototype\RPPrototypeGameMode.gen.cpp.obj"
+/I "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\INCLUDE"
+/I "C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um"
+/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt"
+/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared"
+/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um"
+/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt"
+/FI"C:\Users\rober\Desktop\College\GameJam2019\RenegadePlanet\RPPrototype\Intermediate\Build\Win64\RPPrototypeEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
+/Yu"C:\Users\rober\Desktop\College\GameJam2019\RenegadePlanet\RPPrototype\Intermediate\Build\Win64\RPPrototypeEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
+/Fp"C:\Users\rober\Desktop\College\GameJam2019\RenegadePlanet\RPPrototype\Intermediate\Build\Win64\RPPrototypeEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
+"C:\Users\rober\Desktop\College\GameJam2019\RenegadePlanet\RPPrototype\Intermediate\Build\Win64\UE4Editor\Inc\RPPrototype\RPPrototypeGameMode.gen.cpp"
+/FI"C:\Users\rober\Desktop\College\GameJam2019\RenegadePlanet\RPPrototype\Intermediate\Build\Win64\UE4Editor\Development\RPPrototype\Definitions.RPPrototype.h"
+/Fo"C:\Users\rober\Desktop\College\GameJam2019\RenegadePlanet\RPPrototype\Intermediate\Build\Win64\UE4Editor\Development\RPPrototype\RPPrototypeGameMode.gen.cpp.obj"
 /TP
 /GR-
 /W4

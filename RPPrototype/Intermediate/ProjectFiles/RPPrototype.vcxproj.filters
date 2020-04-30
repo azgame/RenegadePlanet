@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\RPPrototype.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{999E51FA-679C-4A23-ACB1-4A07C25E2B9E}</UniqueIdentifier>
+      <UniqueIdentifier>{9B2CDD0D-E836-41BE-8441-0A1A05168673}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\RPPrototype.Target.cs">
       <Filter>Source</Filter>
@@ -13,7 +13,7 @@
     </None>
     <None Include="..\..\.gitignore" />
     <Filter Include="Config">
-      <UniqueIdentifier>{DB2C1A30-7423-4CFA-9A8B-AD85400E31AA}</UniqueIdentifier>
+      <UniqueIdentifier>{F5F4E52B-B59C-4E14-97A1-91182C637243}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -31,7 +31,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\RPPrototype">
-      <UniqueIdentifier>{88626BB9-15A5-488D-B569-6A37FE66AADD}</UniqueIdentifier>
+      <UniqueIdentifier>{B8BF2444-94E7-4F77-99DE-7294D0BC75D5}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\RPPrototype\RPPrototype.Build.cs">
       <Filter>Source\RPPrototype</Filter>
@@ -55,7 +55,7 @@
       <Filter>Source\RPPrototype</Filter>
     </ClInclude>
     <Filter Include="Source\RPPrototype\Characters">
-      <UniqueIdentifier>{72E64A9D-EC6C-4A3A-8E92-50FBA0FF0FD0}</UniqueIdentifier>
+      <UniqueIdentifier>{D1B58FB3-2F30-4872-9C4D-FE3799594D19}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\RPPrototype\Characters\CollisionComponent.cpp">
       <Filter>Source\RPPrototype\Characters</Filter>
@@ -70,7 +70,7 @@
       <Filter>Source\RPPrototype\Characters</Filter>
     </ClInclude>
     <Filter Include="Source\RPPrototype\Interfaces">
-      <UniqueIdentifier>{F1284423-2D44-4F4B-B59A-F050D6D2D0F1}</UniqueIdentifier>
+      <UniqueIdentifier>{D89D1174-5918-46B6-8656-9FE413BF205B}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\RPPrototype\Interfaces\Interactable.cpp">
       <Filter>Source\RPPrototype\Interfaces</Filter>
@@ -79,13 +79,34 @@
       <Filter>Source\RPPrototype\Interfaces</Filter>
     </ClInclude>
     <Filter Include="Source\RPPrototype\Testing">
-      <UniqueIdentifier>{1069A36D-FD3F-4B2D-8FE3-D89F919DB660}</UniqueIdentifier>
+      <UniqueIdentifier>{D216AF2E-1C21-4A7D-A4CB-9B5CFB191B58}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\RPPrototype\Testing\InteractTest.cpp">
       <Filter>Source\RPPrototype\Testing</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\RPPrototype\Testing\InteractTest.h">
       <Filter>Source\RPPrototype\Testing</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source\RPPrototype\Weapons">
+      <UniqueIdentifier>{2751e426-4b61-4f2b-9cbc-63dff25ba239}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\RPPrototype\BaseWeapon.cpp">
+      <Filter>Source\RPPrototype\Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\RPPrototype\Drill.cpp">
+      <Filter>Source\RPPrototype\Weapons</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\RPPrototype\BaseWeapon.h">
+      <Filter>Source\RPPrototype\Weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\RPPrototype\Drill.h">
+      <Filter>Source\RPPrototype\Weapons</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
