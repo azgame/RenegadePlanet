@@ -4,7 +4,9 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "Components/StaticMeshComponent.h"
 #include "BaseWeapon.generated.h"
+
 
 UCLASS()
 class RPPROTOTYPE_API ABaseWeapon : public AActor

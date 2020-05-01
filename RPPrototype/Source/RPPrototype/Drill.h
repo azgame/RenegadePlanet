@@ -17,7 +17,7 @@ class RPPROTOTYPE_API ADrill : public ABaseWeapon
 public:
 	ADrill();
 	UPROPERTY(editanywhere)
-	UBoxComponent* CollisionMesh = nullptr;
+		UBoxComponent* CollisionMesh;
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
