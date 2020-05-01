@@ -1,2 +1,0 @@
-C:\Users\rober\Desktop\College\GameJam2019\RenegadePlanet\RPPrototype\Intermediate\Build\Win64\UE4Editor\Development\RPPrototype\Definitions.RPPrototype.h
-c:\users\rober\desktop\college\gamejam2019\renegadeplanet\rpprototype\source\rpprototype\RPPrototype.h
