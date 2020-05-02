@@ -13,7 +13,7 @@
 #include "../Interfaces/Interactable.h"
 #include "CollisionComponent.generated.h"
 
-class ARPSideCharacter;
+class ACharacter;
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class RPPROTOTYPE_API UCollisionComponent : public UActorComponent
@@ -47,6 +47,6 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Player Collision")
 		void onInteract();
 
-	ARPSideCharacter* owner;
-	FORCEINLINE void SetPlayerRef(ARPSideCharacter* ref_) { owner = ref_; }
+	ACharacter* owner;
+	FORCEINLINE void SetPlayerRef(ACharacter* ref_) { owner = ref_; }
 };

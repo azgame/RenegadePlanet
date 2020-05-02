@@ -2,7 +2,7 @@
 
 
 #include "CollisionComponent.h"
-#include "RPSideCharacter.h"
+#include "GameFramework/Character.h"
 #include "Engine.h"
 
 // Sets default values for this component's properties
