@@ -2,7 +2,7 @@
 
 #pragma once
 
-#include "BaseWeapon.h"
+#include "WeaponComponent.h"
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "RPPrototypeCharacter.generated.h"
@@ -21,8 +21,8 @@ class ARPPrototypeCharacter : public ACharacter
 	class UCameraComponent* FollowCamera;
 public:
 	ARPPrototypeCharacter();
-	UPROPERTY(editanywhere)
-		class ABaseWeapon* weapon;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = WeaponComponent)
+	UWeaponComponent* weaponComponent;
 
 
 	/** Base turn rate, in deg/sec. Other scaling may affect final turn rate. */

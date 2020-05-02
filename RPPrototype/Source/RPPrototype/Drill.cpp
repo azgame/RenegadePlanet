@@ -21,6 +21,8 @@ CollisionMesh = CreateDefaultSubobject<UBoxComponent>(FName("Collision Mesh"));
 CollisionMesh->SetupAttachment(RootComponent);
 CollisionMesh->SetRelativeLocation(FVector(0.0f, 0.0f, 50.0f));
 CollisionMesh->SetRelativeScale3D(FVector(1.2f, 1.2f, 1.8f));
+Super::pChargeTime=60;
+Super::sChargeTime=60;
 }
 void ADrill::BeginPlay() 
 {
@@ -34,6 +36,8 @@ void ADrill::Tick(float DeltaTime)
 void ADrill::PAttack1()
 {
 	UE_LOG(LogTemp, Warning, TEXT("PA1"));
+	
+
 }
 void ADrill::PAttack2()
 {

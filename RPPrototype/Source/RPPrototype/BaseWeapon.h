@@ -19,7 +19,8 @@ public:
 	float damage;
 	float maxAmmo;
 	float ammo;
-
+	int pChargeTime;
+	int sChargeTime;
 	UPROPERTY(EditAnywhere)
 	UStaticMeshComponent* mesh;
 	
