@@ -3,12 +3,14 @@
 
 #include "WeaponComponent.h"
 #include "Drill.h"
+#include "Engine/World.h"
 // Sets default values for this component's properties
 UWeaponComponent::UWeaponComponent()
 {
 	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
 	// off to improve performance if you don't need them.
 	PrimaryComponentTick.bCanEverTick = true;
+	
 	currentWeapon = CreateDefaultSubobject<ADrill>(TEXT("currentWeapon"));
 	if (currentWeapon)
 	{
@@ -23,7 +25,13 @@ UWeaponComponent::UWeaponComponent()
 // Called when the game starts
 void UWeaponComponent::BeginPlay()
 {
+	
 	Super::BeginPlay();
+	
+	FTransform SpawnLocation;
+	UPROPERTY(editanywhere)
+		TSubclassOf<ADrill> weapontospawn;
+	GetWorld()->SpawnActor(weapontospawn, &SpawnLocation);
 	if (currentWeapon)
 	{
 

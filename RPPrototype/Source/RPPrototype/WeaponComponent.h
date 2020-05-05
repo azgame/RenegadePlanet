@@ -25,7 +25,6 @@ public:
 	void SAReleased();
 	void SetPHeld();
 	void SetSHeld();
-
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
