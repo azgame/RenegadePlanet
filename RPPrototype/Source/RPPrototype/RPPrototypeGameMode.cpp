@@ -1,7 +1,7 @@
 // Copyright 1998-2019 Epic Games, Inc. All Rights Reserved.
 
 #include "RPPrototypeGameMode.h"
-#include "RPPrototypeCharacter.h"
+#include "Planet/RPPrototypeCharacter.h"
 #include "UObject/ConstructorHelpers.h"
 
 ARPPrototypeGameMode::ARPPrototypeGameMode()

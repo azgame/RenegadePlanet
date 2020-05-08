@@ -42,9 +42,9 @@ ARPPrototypeCharacter::ARPPrototypeCharacter()
 	FollowCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("FollowCamera"));
 	FollowCamera->SetupAttachment(CameraBoom, USpringArmComponent::SocketName); // Attach the camera to the end of the boom and let the boom adjust to match the controller orientation
 	FollowCamera->bUsePawnControlRotation = false; // Camera does not rotate relative to arm
+
 	weaponComponent = CreateDefaultSubobject<UWeaponComponent>(TEXT("weapon component"));
-	
-	
+	weaponComponent->SetPlayerRef(this);
 	// Note: The skeletal mesh and anim blueprint references on the Mesh component (inherited from Character) 
 	// are set in the derived blueprint asset named MyCharacter (to avoid direct content references in C++)
 }
@@ -54,8 +54,8 @@ ARPPrototypeCharacter::ARPPrototypeCharacter()
 void ARPPrototypeCharacter::BeginPlay()
 {
 	Super::BeginPlay();
-	//weapon = NewObject<ABaseWeapon>(this);
 }
+
 void ARPPrototypeCharacter::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent)
 {
 	// Set up gameplay key bindings

@@ -4,43 +4,30 @@
 #include "WeaponComponent.h"
 #include "Drill.h"
 #include "Engine/World.h"
+
+
 // Sets default values for this component's properties
 UWeaponComponent::UWeaponComponent()
 {
 	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
 	// off to improve performance if you don't need them.
 	PrimaryComponentTick.bCanEverTick = true;
-	
-	currentWeapon = CreateDefaultSubobject<ADrill>(TEXT("currentWeapon"));
-	if (currentWeapon)
-	{
-
-	pHoldTimeMax = currentWeapon->pChargeTime;
-	sHoldTimeMax = currentWeapon->sChargeTime;
-	}
-	// ...
 }
-
 
 // Called when the game starts
 void UWeaponComponent::BeginPlay()
 {
-	
 	Super::BeginPlay();
-	
-	FTransform SpawnLocation;
-	UPROPERTY(editanywhere)
-		TSubclassOf<ADrill> weapontospawn;
-	GetWorld()->SpawnActor(weapontospawn, &SpawnLocation);
+
+	currentWeapon = Cast<ADrill>(GetWorld()->SpawnActor(ADrill::StaticClass(), &owner->GetActorTransform()));
+
 	if (currentWeapon)
 	{
-
 		pHoldTimeMax = currentWeapon->pChargeTime;
 		sHoldTimeMax = currentWeapon->sChargeTime;
 	}
-	// ...
-	
 }
+
 void UWeaponComponent::PA()
 {
 	
@@ -53,6 +40,7 @@ void UWeaponComponent::PA()
 		//possibly add animation or something to indicate charge is ready
 	}
 }
+
 void UWeaponComponent::PAReleased()
 {
 	if (pHoldTime < pHoldTimeMax)
@@ -64,11 +52,13 @@ void UWeaponComponent::PAReleased()
 	{
 		currentWeapon->PAttack2();
 	}
+
 	sHoldTime = 0;
 	pHoldTime = 0;
 	pHeld = false;
 	pHeld = false;
 }
+
 void UWeaponComponent::SA()
 {
 
@@ -81,6 +71,7 @@ void UWeaponComponent::SA()
 		//possibly add animation or something to indicate charge is ready
 	}
 }
+
 void UWeaponComponent::SAReleased()
 {
 	if (sHoldTime < sHoldTimeMax)
@@ -91,15 +82,18 @@ void UWeaponComponent::SAReleased()
 	{
 		currentWeapon->SAttack2();
 	}
+
 	sHoldTime = 0;
 	pHoldTime = 0;
 	pHeld = false;
 	pHeld = false;
 }
+
 // Called every frame
 void UWeaponComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
+
 	if (pHeld)
 	{
 		PA();
@@ -108,13 +102,14 @@ void UWeaponComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActo
 	{
 		SA();
 	}
-	// ...
 }
+
 void UWeaponComponent::SetPHeld()
 {
 	pHeld = true;
 	sHeld = false;
 }
+
 void UWeaponComponent::SetSHeld()
 {
 	pHeld = false;
