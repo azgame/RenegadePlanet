@@ -37,5 +37,7 @@ void AInteractTest::onUse(AActor* otherActor_)
 	if (player)
 	{
 		rotate *= -1;
+		if (player->hudDisplay)
+			player->hudDisplay->ExitDialogue();
 	}
 }

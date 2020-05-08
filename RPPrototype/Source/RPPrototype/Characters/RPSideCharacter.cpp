@@ -40,7 +40,7 @@ ARPSideCharacter::ARPSideCharacter()
 	// Configure character movement
 	GetCharacterMovement()->bOrientRotationToMovement = true; // Face in the direction we are moving..
 	GetCharacterMovement()->RotationRate = FRotator(0.0f, 720.0f, 0.0f); // ...at this rotation rate
-	GetCharacterMovement()->GravityScale = 2.f;
+	GetCharacterMovement()->GravityScale = 4.f;
 	GetCharacterMovement()->AirControl = 0.80f;
 	GetCharacterMovement()->JumpZVelocity = 1000.f;
 	GetCharacterMovement()->GroundFriction = 3.f;
@@ -60,7 +60,6 @@ void ARPSideCharacter::BeginPlay()
 void ARPSideCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
 }
 
 void ARPSideCharacter::MoveRight(float Value)
@@ -78,6 +77,5 @@ void ARPSideCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
 
 	PlayerInputComponent->BindAxis("MoveRight", this, &ARPSideCharacter::MoveRight);
-
 }
 

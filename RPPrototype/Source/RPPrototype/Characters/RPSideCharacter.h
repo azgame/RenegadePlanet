@@ -5,7 +5,9 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "CollisionComponent.h"
+#include "../HUD_UI.h"
 #include "RPSideCharacter.generated.h"
+
 
 UCLASS(config = Game)
 class RPPROTOTYPE_API ARPSideCharacter : public ACharacter
@@ -26,6 +28,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = CollisionComponent)
 		UCollisionComponent* collisionComponent;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = HUD)
+		UHUD_UI* hudDisplay;
 
 protected:
 	// Called when the game starts or when spawned

@@ -4,6 +4,8 @@
 #include "RPSideNPC.h"
 #include "Components/CapsuleComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
+#include "RPSideCharacter.h"
+
 
 // Sets default values
 ARPSideNPC::ARPSideNPC()
@@ -49,6 +51,11 @@ void ARPSideNPC::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent
 
 void ARPSideNPC::onUse(AActor* otherActor_)
 {
+	ARPSideCharacter* player = Cast<ARPSideCharacter>(otherActor_);
 
+	if (player)
+	{
+		if (player->hudDisplay)
+			player->hudDisplay->DisplayDialogue(FText::FromString("Test char"), FText::FromString("Test dialogue"));
+	}
 }
-
