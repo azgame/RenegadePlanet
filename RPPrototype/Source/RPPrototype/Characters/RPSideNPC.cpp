@@ -4,6 +4,7 @@
 #include "RPSideNPC.h"
 #include "Components/CapsuleComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
+#include "AIController.h"
 #include "RPSideCharacter.h"
 
 
@@ -24,7 +25,6 @@ ARPSideNPC::ARPSideNPC()
 	GetCharacterMovement()->GroundFriction = 3.f;
 	GetCharacterMovement()->MaxWalkSpeed = 600.0f;
 	GetCharacterMovement()->MaxFlySpeed = 600.f;
-
 }
 
 // Called when the game starts or when spawned
@@ -54,8 +54,5 @@ void ARPSideNPC::onUse(AActor* otherActor_)
 	ARPSideCharacter* player = Cast<ARPSideCharacter>(otherActor_);
 
 	if (player)
-	{
-		if (player->hudDisplay)
-			player->hudDisplay->DisplayDialogue(FText::FromString("Test char"), FText::FromString("Test dialogue"));
-	}
+		if (hudDisplay) hudDisplay->DisplayDialogue(FText::FromString("Test char"), FText::FromString("Test dialogue"));
 }

@@ -6,6 +6,7 @@
 #include "GameFramework/Character.h"
 #include "CollisionComponent.h"
 #include "../Interfaces/Interactable.h"
+#include "../HUD_UI.h"
 #include "RPSideNPC.generated.h"
 
 UCLASS()
@@ -19,6 +20,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = CollisionComponent)
 		UCollisionComponent* collisionComponent;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = HUD)
+		UHUD_UI* hudDisplay;
 
 protected:
 	// Called when the game starts or when spawned
