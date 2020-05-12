@@ -53,6 +53,8 @@ void ARPSideNPC::onUse(AActor* otherActor_)
 {
 	ARPSideCharacter* player = Cast<ARPSideCharacter>(otherActor_);
 
-	if (player)
-		if (hudDisplay) hudDisplay->DisplayDialogue(FText::FromString("Test char"), FText::FromString("Test dialogue"));
+	//if (player)
+		//if (hudDisplay) hudDisplay->DisplayDialogue(FText::FromString("Test char"), FText::FromString("Test dialogue"));
+
+	onUseUIElement();
 }

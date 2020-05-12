@@ -35,6 +35,9 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+		void onUseUIElement();
+
 	UFUNCTION(BlueprintCallable)
 	void onUse(AActor* otherActor_) override;
 };
