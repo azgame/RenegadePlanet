@@ -12,7 +12,7 @@ ADrill::ADrill()
 	{
 		Super::mesh->SetStaticMesh(DrillAsset.Object);
 		Super::mesh->SetRelativeLocation(FVector(0.0f, 0.0f, 0.0f));
-		Super::mesh->SetWorldScale3D(FVector(1.0f));
+		Super::mesh->SetWorldScale3D(FVector(0.6f,0.6f,1.0f));
 	}
 
 	CollisionMesh = CreateDefaultSubobject<UBoxComponent>(FName("Collision Mesh"));

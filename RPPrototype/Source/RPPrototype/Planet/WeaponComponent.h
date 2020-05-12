@@ -19,10 +19,10 @@ public:
 	// Sets default values for this component's properties
 	UWeaponComponent();
 
-	UPROPERTY(editanywhere)
+	UPROPERTY(editanywhere, BlueprintReadOnly, Category = "Weapons")
 	ABaseWeapon* currentWeapon;
 
-	UPROPERTY(editanywhere)
+	UPROPERTY(editanywhere, BlueprintReadOnly, Category = "Weapons")
 	ABaseWeapon* otherWeapon;
 
 	void PA();
