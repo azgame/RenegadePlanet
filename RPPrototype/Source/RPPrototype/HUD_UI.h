@@ -19,5 +19,8 @@ public:
 		void DisplayDialogue(const FText& name_, const FText& msg_);
 
 	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+		void AskQuestion(const FText& name_, const FText& msg_, const TArray<FText>& choices_);
+
+	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
 		void ExitDialogue();
 };
