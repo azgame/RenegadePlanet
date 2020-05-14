@@ -37,6 +37,7 @@ void ADrill::Tick(float DeltaTime)
 void ADrill::PAttack1()
 {
 	UE_LOG(LogTemp, Warning, TEXT("PA1"));
+	
 }
 
 void ADrill::PAttack2()
