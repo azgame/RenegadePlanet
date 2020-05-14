@@ -68,6 +68,15 @@ void ARPSideCharacter::MoveRight(float Value)
 	AddMovementInput(FVector(0.f, -1.f, 0.f), Value);
 }
 
+void ARPSideCharacter::OnClicked()
+{
+
+}
+
+void ARPSideCharacter::OnReleased()
+{
+
+}
 
 // Called to bind functionality to input
 void ARPSideCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
@@ -77,5 +86,6 @@ void ARPSideCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
 
 	PlayerInputComponent->BindAxis("MoveRight", this, &ARPSideCharacter::MoveRight);
+	
 }
 

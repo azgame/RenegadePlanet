@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Blueprint/UserWidget.h"
+#include "FDialogueStructure.h"
 #include "HUD_UI.generated.h"
 
 /**
@@ -16,10 +17,10 @@ class RPPROTOTYPE_API UHUD_UI : public UUserWidget
 	
 public:
 	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-		void DisplayDialogue(const FText& name_, const FText& msg_);
+		void DisplayDialogue(const FDialogueStructure& dialogue_);
 
 	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-		void AskQuestion(const FText& name_, const FText& msg_, const TArray<FText>& choices_);
+		void AskQuestion(const FDialogueStructure& prompt_, const TArray<FDialogueStructure>& choices_);
 
 	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
 		void ExitDialogue();

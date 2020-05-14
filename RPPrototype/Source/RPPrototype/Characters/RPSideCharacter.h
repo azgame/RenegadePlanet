@@ -39,6 +39,9 @@ protected:
 	/** Called for side to side input */
 	void MoveRight(float Value);
 
+	void OnClicked();
+	void OnReleased();
+
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
