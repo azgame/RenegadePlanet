@@ -63,8 +63,8 @@ void ARPPrototypeCharacter::SetupPlayerInputComponent(class UInputComponent* Pla
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
 	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
 
-	PlayerInputComponent->BindAction("PA", IE_Pressed, weaponComponent, &UWeaponComponent::SetPHeld);
-	PlayerInputComponent->BindAction("PA", IE_Released, weaponComponent, &UWeaponComponent::PAReleased);
+	//PlayerInputComponent->BindAction("PA", IE_Pressed, weaponComponent, &UWeaponComponent::SetPHeld);
+	//PlayerInputComponent->BindAction("PA", IE_Released, weaponComponent, &UWeaponComponent::PAReleased);
 	PlayerInputComponent->BindAction("SA", IE_Pressed, weaponComponent, &UWeaponComponent::SetSHeld);
 	PlayerInputComponent->BindAction("SA", IE_Released, weaponComponent, &UWeaponComponent::SAReleased);
 
