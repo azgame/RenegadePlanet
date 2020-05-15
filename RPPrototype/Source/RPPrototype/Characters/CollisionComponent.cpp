@@ -15,6 +15,11 @@ UCollisionComponent::UCollisionComponent()
 	// ...
 	Collider = CreateDefaultSubobject<USphereComponent>(TEXT("InteractSphereCollider"));
 	Collider->SetGenerateOverlapEvents(true);
+	Collider->OnComponentBeginOverlap.AddDynamic(this, &UCollisionComponent::OnBeginOverlap);
+	Collider->OnComponentEndOverlap.AddDynamic(this, &UCollisionComponent::OnEndOverlap);
+
+	closestActor = nullptr;
+	overlappingActors = TArray<AActor*>();
 }
 
 
@@ -34,22 +39,7 @@ void UCollisionComponent::TickComponent(float DeltaTime, ELevelTick TickType, FA
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
 	// ...
-}
-
-void UCollisionComponent::SetupAttachment(USceneComponent* RootComponent)
-{
-	Collider->SetupAttachment(RootComponent);
-}
-
-void UCollisionComponent::OnCollision(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
-{
-}
-
-void UCollisionComponent::onInteract()
-{
-	TArray<AActor*> overlappingActors = TArray<AActor*>();
-	Collider->GetOverlappingActors(overlappingActors);
-
+	closestActor = nullptr;
 	IInteractable* closestInteract = nullptr;
 	float shortestDistance = FLT_MAX;
 
@@ -63,20 +53,45 @@ void UCollisionComponent::onInteract()
 				if (0 <= owner->GetActorForwardVector().DotProduct(owner->GetActorForwardVector(), actor->GetActorLocation() - owner->GetActorLocation()))
 				{
 					float distance = owner->GetDistanceTo(actor);
-						if (distance < shortestDistance)
-						{
-							shortestDistance = distance;
-								closestInteract = it;
-						}
+					if (distance < shortestDistance)
+					{
+						shortestDistance = distance;
+						closestInteract = it;
+						closestActor = actor;
+					}
 				}
 				it = nullptr;
 			}
 		}
 	}
-
-	if (closestInteract)
-		closestInteract->onUse(owner);
-
-	closestInteract = nullptr;
 }
 
+void UCollisionComponent::SetupAttachment(USceneComponent* RootComponent)
+{
+	Collider->SetupAttachment(RootComponent);
+}
+
+void UCollisionComponent::OnCollision(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
+{
+}
+
+void UCollisionComponent::OnBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
+{
+	Collider->GetOverlappingActors(overlappingActors);
+}
+
+void UCollisionComponent::OnEndOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
+{
+	Collider->GetOverlappingActors(overlappingActors);
+}
+
+void UCollisionComponent::onInteract()
+{
+	if (closestActor)
+		Cast<IInteractable>(closestActor)->onUse(owner);
+}
+
+AActor* UCollisionComponent::GetClosestInteract()
+{
+	return closestActor;
+}

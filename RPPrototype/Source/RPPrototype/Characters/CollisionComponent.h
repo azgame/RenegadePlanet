@@ -38,15 +38,26 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Player Collision")
 		USphereComponent* Collider;
 
-	UPROPERTY(EditAnywhere, Category = "Player Collsion")
+	UPROPERTY(EditAnywhere, Category = "Player Collision")
 		float radius;
 
 	UFUNCTION(BlueprintCallable, Category = "Player Collision")
 		void OnCollision(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
 
 	UFUNCTION(BlueprintCallable, Category = "Player Collision")
+		void OnBeginOverlap(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
+
+	UFUNCTION(BlueprintCallable, Category = "Player Collision")
+		void OnEndOverlap(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
+
+	UFUNCTION(BlueprintCallable, Category = "Player Collision")
 		void onInteract();
 
+	UFUNCTION(BlueprintCallable, Category = "Player Collision")
+		AActor* GetClosestInteract();
+
+	TArray<AActor*> overlappingActors;
+	AActor* closestActor;
 	ACharacter* owner;
 	FORCEINLINE void SetPlayerRef(ACharacter* ref_) { owner = ref_; }
 };
