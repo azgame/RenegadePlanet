@@ -45,6 +45,9 @@ ARPPrototypeCharacter::ARPPrototypeCharacter()
 
 	weaponComponent = CreateDefaultSubobject<UWeaponComponent>(TEXT("weapon component"));
 	weaponComponent->SetPlayerRef(this);
+
+	collisionComponent = CreateDefaultSubobject<UCollisionComponent>(TEXT("collision component"));
+	collisionComponent->SetupAttachment(this, GetCapsuleComponent());
 	// Note: The skeletal mesh and anim blueprint references on the Mesh component (inherited from Character) 
 	// are set in the derived blueprint asset named MyCharacter (to avoid direct content references in C++)
 }

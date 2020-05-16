@@ -5,6 +5,7 @@
 #include "WeaponComponent.h"
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "../Characters/CollisionComponent.h"
 #include "RPPrototypeCharacter.generated.h"
 
 UCLASS(config=Game)
@@ -24,6 +25,8 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = WeaponComponent)
 	UWeaponComponent* weaponComponent;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = CollisionComponent)
+		UCollisionComponent* collisionComponent;
 
 	/** Base turn rate, in deg/sec. Other scaling may affect final turn rate. */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera)

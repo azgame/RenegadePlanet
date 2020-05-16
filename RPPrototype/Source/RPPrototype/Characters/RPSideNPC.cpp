@@ -14,7 +14,7 @@ ARPSideNPC::ARPSideNPC()
 	// Set size for collision capsule
 	GetCapsuleComponent()->InitCapsuleSize(42.f, 96.0f);
 	collisionComponent = CreateDefaultSubobject<UCollisionComponent>(TEXT("collision component"));
-	collisionComponent->SetupAttachment(GetCapsuleComponent());
+	collisionComponent->SetupAttachment(this, GetCapsuleComponent());
 
 	// Configure character movement
 	GetCharacterMovement()->bOrientRotationToMovement = true; // Face in the direction we are moving..
@@ -31,8 +31,6 @@ ARPSideNPC::ARPSideNPC()
 void ARPSideNPC::BeginPlay()
 {
 	Super::BeginPlay();
-	
-	collisionComponent->SetPlayerRef(this);
 }
 
 // Called every frame

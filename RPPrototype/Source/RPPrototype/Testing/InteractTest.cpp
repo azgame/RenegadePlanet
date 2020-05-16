@@ -3,6 +3,7 @@
 
 #include "InteractTest.h"
 #include "../Characters/RPSideCharacter.h"
+#include "../Planet/RPPrototypeCharacter.h"
 
 // Sets default values
 AInteractTest::AInteractTest()
@@ -37,7 +38,10 @@ void AInteractTest::onUse(AActor* otherActor_)
 	if (player)
 	{
 		rotate *= -1;
-		if (player->hudDisplay)
-			player->hudDisplay->ExitDialogue();
 	}
+
+	ARPPrototypeCharacter* playerThird = Cast<ARPPrototypeCharacter>(otherActor_);
+
+	if (playerThird)
+		rotate *= -1;
 }

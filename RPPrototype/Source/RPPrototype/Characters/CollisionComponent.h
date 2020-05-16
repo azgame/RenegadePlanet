@@ -32,32 +32,33 @@ public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
-	UFUNCTION(BlueprintCallable, Category = "Player Collision")
-		void SetupAttachment(USceneComponent* RootComponent);
+	UFUNCTION(BlueprintCallable, Category = "Custom Collision")
+		void SetupAttachment(ACharacter* owner_, USceneComponent* RootComponent);
 
-	UPROPERTY(EditAnywhere, Category = "Player Collision")
+	UPROPERTY(EditAnywhere, Category = "Custom Collision")
 		USphereComponent* Collider;
 
-	UPROPERTY(EditAnywhere, Category = "Player Collision")
+	UPROPERTY(EditAnywhere, Category = "Custom Collision")
 		float radius;
 
-	UFUNCTION(BlueprintCallable, Category = "Player Collision")
+	UFUNCTION(BlueprintCallable, Category = "Custom Collision")
 		void OnCollision(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
 
-	UFUNCTION(BlueprintCallable, Category = "Player Collision")
+	UFUNCTION(BlueprintCallable, Category = "Custom Collision")
 		void OnBeginOverlap(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
 
-	UFUNCTION(BlueprintCallable, Category = "Player Collision")
+	UFUNCTION(BlueprintCallable, Category = "Custom Collision")
 		void OnEndOverlap(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
 
-	UFUNCTION(BlueprintCallable, Category = "Player Collision")
+	UFUNCTION(BlueprintCallable, Category = "Custom Collision")
 		void onInteract();
 
-	UFUNCTION(BlueprintCallable, Category = "Player Collision")
+	UFUNCTION(BlueprintCallable, Category = "Custom Collision")
 		AActor* GetClosestInteract();
 
 	TArray<AActor*> overlappingActors;
 	AActor* closestActor;
 	ACharacter* owner;
-	FORCEINLINE void SetPlayerRef(ACharacter* ref_) { owner = ref_; }
+
+	
 };

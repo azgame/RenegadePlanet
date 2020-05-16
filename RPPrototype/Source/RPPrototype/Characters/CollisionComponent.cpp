@@ -66,9 +66,10 @@ void UCollisionComponent::TickComponent(float DeltaTime, ELevelTick TickType, FA
 	}
 }
 
-void UCollisionComponent::SetupAttachment(USceneComponent* RootComponent)
+void UCollisionComponent::SetupAttachment(ACharacter* owner_, USceneComponent* RootComponent)
 {
 	Collider->SetupAttachment(RootComponent);
+	owner = owner_;
 }
 
 void UCollisionComponent::OnCollision(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
