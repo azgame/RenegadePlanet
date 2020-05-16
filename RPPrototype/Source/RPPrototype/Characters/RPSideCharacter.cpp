@@ -34,9 +34,6 @@ ARPSideCharacter::ARPSideCharacter()
 	SideViewCameraComponent->SetupAttachment(CameraBoom, USpringArmComponent::SocketName);
 	SideViewCameraComponent->bUsePawnControlRotation = false; // We don't want the controller rotating the camera
 
-	collisionComponent = CreateDefaultSubobject<UCollisionComponent>(TEXT("collision component"));
-	collisionComponent->SetupAttachment(this, GetCapsuleComponent());
-
 	// Configure character movement
 	GetCharacterMovement()->bOrientRotationToMovement = true; // Face in the direction we are moving..
 	GetCharacterMovement()->RotationRate = FRotator(0.0f, 720.0f, 0.0f); // ...at this rotation rate
@@ -46,6 +43,9 @@ ARPSideCharacter::ARPSideCharacter()
 	GetCharacterMovement()->GroundFriction = 3.f;
 	GetCharacterMovement()->MaxWalkSpeed = 600.0f;
 	GetCharacterMovement()->MaxFlySpeed = 600.f;
+
+	collisionComponent = CreateDefaultSubobject<UCollisionComponent>(TEXT("collision component"));
+	collisionComponent->SetupAttachment(this, GetCapsuleComponent());
 }
 
 // Called when the game starts or when spawned
@@ -68,12 +68,10 @@ void ARPSideCharacter::MoveRight(float Value)
 
 void ARPSideCharacter::OnClicked()
 {
-
 }
 
 void ARPSideCharacter::OnReleased()
 {
-
 }
 
 // Called to bind functionality to input
