@@ -39,7 +39,8 @@ public:
 
 	friend class ItemDispatcher;
 
-	// Sets default values for this actor's properties
+	// Sets default values for this actor's properties'
+	AItem();
 	AItem(ItemID id, std::bitset<ATTRIBUTE_COUNT> attributes = std::bitset<ATTRIBUTE_COUNT>{});
 
 	virtual void use(ItemDispatcher& dispatcher) PURE_VIRTUAL(AItem::use,;);

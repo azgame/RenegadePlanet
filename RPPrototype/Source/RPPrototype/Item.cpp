@@ -4,6 +4,12 @@
 #include "Item.h"
 
 // Sets default values
+
+AItem::AItem()
+{
+
+}
+
 AItem::AItem(ItemID id, std::bitset<ATTRIBUTE_COUNT> attributes)
 	: mID{ id }
 {
