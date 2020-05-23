@@ -13,6 +13,9 @@ class RPPROTOTYPE_API UInventoryComponent : public UActorComponent
 {
 	GENERATED_BODY()
 
+	AInventory* inventory;
+	AActor* owner;
+
 public:	
 	// Sets default values for this component's properties
 	UInventoryComponent();
@@ -25,6 +28,8 @@ public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
-	UPROPERTY(EditAnywhere, Category = "Inventory")
-	AInventory* inventory;
+	FORCEINLINE void setPlayerRef(AActor* owner_) { owner = owner_; }
+
+	UFUNCTION(BlueprintCallable, Category = "Inventory")
+		AInventory* getInventory();
 };

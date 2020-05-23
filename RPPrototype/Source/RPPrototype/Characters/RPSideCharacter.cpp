@@ -46,6 +46,9 @@ ARPSideCharacter::ARPSideCharacter()
 
 	collisionComponent = CreateDefaultSubobject<UCollisionComponent>(TEXT("collision component"));
 	collisionComponent->SetupAttachment(this, GetCapsuleComponent());
+
+	inventoryComponent = CreateDefaultSubobject<UInventoryComponent>(TEXT("inventory component"));
+	inventoryComponent->setPlayerRef(this);
 }
 
 // Called when the game starts or when spawned

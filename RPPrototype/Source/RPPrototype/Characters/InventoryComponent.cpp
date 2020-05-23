@@ -11,8 +11,8 @@ UInventoryComponent::UInventoryComponent()
 	PrimaryComponentTick.bCanEverTick = false;
 
 	// ...
-	//inventory = NewObject<AInventory>();
-	//inventory->sz = 10;
+	inventory = NewObject<AInventory>();
+	inventory->Initialize(100, owner);
 }
 
 
@@ -33,3 +33,7 @@ void UInventoryComponent::TickComponent(float DeltaTime, ELevelTick TickType, FA
 	// ...
 }
 
+AInventory* UInventoryComponent::getInventory()
+{
+	return inventory;
+}

@@ -12,13 +12,14 @@ AInteractTest::AInteractTest()
 	PrimaryActorTick.bCanEverTick = true;
 	rotate = 1.f;
 	yaw = 0.0f;
+	item = NewObject<AItem>();
 }
 
 // Called when the game starts or when spawned
 void AInteractTest::BeginPlay()
 {
 	Super::BeginPlay();
-	
+	item->Initialize(ItemID::DEFAULT_ITEM, "basic item", std::bitset<3>("110"));
 }
 
 // Called every frame
@@ -38,6 +39,7 @@ void AInteractTest::onUse(AActor* otherActor_)
 	if (player)
 	{
 		rotate *= -1;
+		player->inventoryComponent->getInventory()->emplaceItem(item->name(), item);
 	}
 
 	ARPPrototypeCharacter* playerThird = Cast<ARPPrototypeCharacter>(otherActor_);

@@ -4,9 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-
+#include "Containers/BitArray.h"
 #include <bitset>
-
 #include "Item.generated.h"
 
 UENUM()
@@ -33,6 +32,7 @@ class RPPROTOTYPE_API AItem : public AActor
 	static const int ATTRIBUTE_COUNT = 3;
 
 	ItemID mID;
+	FString mName;
 	std::bitset<ATTRIBUTE_COUNT + 1> mAttributes;
 	
 public:	
@@ -41,7 +41,8 @@ public:
 
 	// Sets default values for this actor's properties'
 	AItem();
-	AItem(ItemID id, std::bitset<ATTRIBUTE_COUNT> attributes = std::bitset<ATTRIBUTE_COUNT>{});
+	
+	void Initialize(ItemID id, FString name_, std::bitset<ATTRIBUTE_COUNT> attributes = std::bitset<ATTRIBUTE_COUNT>{});
 
 	virtual void use(ItemDispatcher& dispatcher) PURE_VIRTUAL(AItem::use,;);
 
@@ -70,8 +71,8 @@ public:
 	ItemID id();
 
 	UFUNCTION(BlueprintCallable, Category = "Item")
+	FString name();
+
+	UFUNCTION(BlueprintCallable, Category = "Item")
 	void setEquip(bool eq);
-
-
-
 };

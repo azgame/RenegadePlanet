@@ -7,18 +7,17 @@
 
 AItem::AItem()
 {
-
+	PrimaryActorTick.bCanEverTick = false;
 }
 
-AItem::AItem(ItemID id, std::bitset<ATTRIBUTE_COUNT> attributes)
-	: mID{ id }
+void AItem::Initialize(ItemID id, FString name_, std::bitset<ATTRIBUTE_COUNT> attributes)
 {
+	mID = id;
+	mName = name_;
 	mAttributes[EQUIPPABLE_POS] = attributes[EQUIPPABLE_POS];
 	mAttributes[STACKABLE_POS] = attributes[STACKABLE_POS];
 	mAttributes[REUSABLE_POS] = attributes[REUSABLE_POS];
 	mAttributes[EQUIPPED_POS] = false;
-
-	PrimaryActorTick.bCanEverTick = false;
 }
 
 // Called when the game starts or when spawned
@@ -62,6 +61,11 @@ bool AItem::stackable()
 ItemID AItem::id()
 {
 	return mID;
+}
+
+FString AItem::name()
+{
+	return mName;
 }
 
 void AItem::setEquippable(bool eq)

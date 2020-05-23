@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "CollisionComponent.h"
+#include "InventoryComponent.h"
 #include "../HUD_UI.h"
 #include "RPSideCharacter.generated.h"
 
@@ -28,6 +29,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = CollisionComponent)
 		UCollisionComponent* collisionComponent;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = InventoryComponent)
+		UInventoryComponent* inventoryComponent;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = HUD)
 		UHUD_UI* hudDisplay;

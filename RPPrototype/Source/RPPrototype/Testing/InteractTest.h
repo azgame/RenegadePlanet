@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "../Interfaces/Interactable.h"
+#include "../Item.h"
 #include "InteractTest.generated.h"
 
 UCLASS()
@@ -18,6 +19,8 @@ public:
 
 	float rotate;
 	float yaw;
+
+	AItem* item;
 
 protected:
 	// Called when the game starts or when spawned
