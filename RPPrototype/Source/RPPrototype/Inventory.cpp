@@ -42,7 +42,19 @@ AItem* AInventory::takeItem(FString itemID_, int & stackSize_, int amount_)
 	if (items.Contains(itemID_))
 	{
 		AItem* itemRet = items.Find(itemID_)->Key;
-		amount_ = items.Find(itemID_)->Value;
+		stackSize_ = items.Find(itemID_)->Value;
+		if (items.Find(itemID_)->Value >= amount_)
+		{
+			items.Find(itemID_)->Value -= amount_;
+			stackSize_ = amount_;
+			itemCount -= amount_;
+		}
+		else
+		{
+			stackSize_ = items.Find(itemID_)->Value;
+			itemCount -= items.Find(itemID_)->Value;
+			items.Find(itemID_)->Value = 0;
+		}
 		return itemRet;
 	}
 
